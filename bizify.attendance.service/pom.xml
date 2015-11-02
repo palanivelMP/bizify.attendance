@@ -24,6 +24,5 @@
 			<artifactId>bizify.attendance.dao</artifactId>
 			<version>${bizify.attendance.version}</version>
 		</dependency>
-
 	</dependencies>
 </project>
