@@ -9,8 +9,8 @@ import com.bizify.attandance.resources.HelloWorldResource;
 
 @Configuration
 @ApplicationPath("/attendance-api/v1")
-public class JerseyConfig extends ResourceConfig {
-    public JerseyConfig() {
+public class JerseyConfiguration extends ResourceConfig {
+    public JerseyConfiguration() {
         register(HelloWorldResource.class);
     }
 }
