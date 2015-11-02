@@ -1,4 +1,4 @@
-package com.bizify.attandance.service;
+package com.bizify.attandance;
 
 import javax.ws.rs.ApplicationPath;
 
