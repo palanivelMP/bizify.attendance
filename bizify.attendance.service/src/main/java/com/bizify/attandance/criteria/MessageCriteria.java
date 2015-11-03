@@ -1,18 +1,13 @@
 package com.bizify.attandance.criteria;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class MessageCriteria {
-    @JsonProperty("message")
+
     private String message;
-    
-    public MessageCriteria() {     
+
+    public MessageCriteria() {
     }
 
-    
-    public MessageCriteria(@JsonProperty("message") String message) {
+    public MessageCriteria(String message) {
         this.message = message;
     }
 

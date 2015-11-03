@@ -6,7 +6,7 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Configuration;
 
-import com.bizify.attandance.resources.HelloWorldResource;
+import com.bizify.attandance.resources.MessageResource;
 import com.bizify.rodin.rest.provider.ObjectMapperContextResolver;
 
 @Configuration
@@ -19,7 +19,7 @@ public class AttendanceConfiguration extends ResourceConfig {
     private void init() {
         register(new ObjectMapperContextResolver());     
         packages("com.bizify.attendance.resources");
-        register(HelloWorldResource.class);
+        register(MessageResource.class);
         register(JacksonFeature.class);
     }
 }
