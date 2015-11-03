@@ -19,10 +19,21 @@ public class MessageResource extends BaseResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
-    public Response<MessageBean> sayHello(@PathParam("id") String id) {
-        Response<MessageBean> response = new Response<MessageBean>();
-        MessageResult result = new MessageResult();
-        result.setData(new MessageBean("10", "hello world"));
-        return respond(response, result);
+    public Response<MessageBean> message(@PathParam("id") String id) {
+
+        MessageResult result = MessageResult.builder().withData(new MessageBean("10", "hello world")).build();
+        Response<MessageBean> response = Response.builder().withResult(result).build();
+
+        return response;
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response<MessageBean> messages() {
+
+        MessageResult result = MessageResult.builder().withData(new MessageBean("10", "hello world")).build();
+        Response<MessageBean> response = Response.builder().withResult(result).build();
+
+        return response;
     }
 }
